@@ -1,0 +1,167 @@
+#  ____    _                       _          _____
+# / ___|  (_)  _ __ ___    _ __   | |   ___  |_   _|  _ __     __ _
+# \___ \  | | | '_ ` _ \  | '_ \  | |  / _ \   | |   | '_ \   / _` |
+#  ___) | | | | | | | | | | |_) | | | |  __/   | |   | |_) | | (_| |
+# |____/  |_| |_| |_| |_| | .__/  |_|  \___|   |_|   | .__/   \__,_|
+#                         |_|                        |_|
+
+# Заповнювачі: %time% | %player% | %option%
+
+
+# !!!!!!!!!!!!!!!!
+# Ці параметри підтримуватимуть всі плагіни, які використовують функції телепортації
+# Якщо ви хочете, щоб плагін реєстрував попередні місця телепортації для команди /back із інших плагінів -> встановіть це значення на true
+enable-teleport-logging: false
+# !!!!!!!!!!!!!!!!
+
+# Якщо ви встановите його в true, ви вимкнете префікс
+# Переконайтеся, що перезапустите сервер, щоб застосувати це
+disable-prefix: false
+prefix: "&c[&6SimpleTpa&c]"
+
+# Повідомлення:
+# Щоб використовувати HEX КОЛЬОРИ - ПРИКЛАД: #2ecc71
+# Death-Message: "&6Що телепортувати вас до локації #2ecc71смерті, використовуйте &c/back"
+
+# ЩОБ ВИМКНУТИ ПЕВНЕ ПОВІДОМЛЕННЯ - НАПИШІТЬ "none"
+# ПРИКЛАД:
+# Console-Isnt-Player: "none"
+Console-Isnt-Player: "&6Консоль не може використовувати &cSimpleTpa&6!"
+Disabled-World-Message: "&6Ви не можете використовувати &cSimpleTpa &6в цьому світі!"
+Teleport-Message: "&6Вас буде телепортовано через &c%time% &6seconds!"
+Teleport-Message-Back-To-Player: "&6Ви &cприйняли &6запит на телепортацію!"
+Player-Is-Null: "&6Гравець зараз не в &онлайн&6!"
+Player-Doesnt-Have-Back-Point: "&6Гравець не має локації для повернення!"
+Player-Doesnt-Have-Back-Point-1: "&6YВи не маєте локацій для повернення!"
+Cooldown-Message: "&6Ви не можете використовувати команду протягом %time% секунд!"
+Death-Message: "&6Що телепортувати вас до локації #2ecc71смерті, використовуйте &c/back"
+Teleport-Message-Back-To-Sender-TPHEREALL: "&6Надсилаємо запит на телепортацію до &cвсіх&6!"
+No-Permission-Message: "&6Ви не маєте доступу до цієї команди!"
+TpaToggle-Deactivated-Player-2: "&c%player% &6вимкнув телепортацію до вас!"
+TpaToggle-Activated-Player-2: "&c%player% &6увімкнув телепортацію до вас!"
+TpaToggle-Deactivated-Player: "&6Ви &cвимкнули&6 телепортацію для &c%player%&6."
+TpaToggle-Activated-Player: "&6Ви &cувімкнули&6 телепортацію для &c%player%&6."
+TpaToggle-Deactivated: "&6Ви &cвимкнули&6 телепортацію до вас."
+TpaToggle-Activated: "&6Ви &cувімкнули&6 телепортацію до вас."
+TpaToggled-Player-Message: "&6Гравець &cвимкнув &6телепортацію до себе!"
+Player-Is-Player: "&6Ви не можете телепортуватися до &cсебе&6!"
+Already-A-TP-Request: "&6Ви вже &cнадіслали &6запит на телепортацію! Якщо ви хочете скасувати &c/tpcancel player "
+Tpa-Usage-Message: "&6Будь ласка, використовуйте: &c/tpa (гравець)"
+Timed-Out-Message: "&6Ваш час на запит телепортації &6 закінчився!"
+Sending-Teleport-Request: "&6Надсилаємо запит на телепортацію &c%player%&6. Якщо ви хочете скасувати &c/tpcancel player "
+Accept-Message: "&6Щоб прийняти запит на телепортацію, пропишіть &c/tpaccept"
+Deny-Message: "&6Щоб відмовити запит на телепортацію, пропишіть &c/tpdeny"
+Sent-Request-On-You: "&c%player% &6надіслав вам запит на телепортацію"
+Timed-Out-Here-Message: "&6Ваш час на запит телепортації сюди &cзакінчився!"
+Sending-Teleport-Here-Request: "&6Надсилаємо сюди запит на телепортацію &c%player%&6. Якщо ви хочете скасувати &c/tpcancel player"
+Sent-Here-Request-On-You: "&c%player% &6відправив вам запит на телепортацію сюди!"
+Already-A-TPHere-Request: "&6Ви вже &cнадіслали &6a сюди запит на телепортацію! Якщо ви хочете скасувати &c/tpcancel player"
+Tpa-Here-Usage-Message: "&6Будь ласка, використовуйте: &c/tpahere (гравець)"
+No-Teleport-Requests: "&6Ви не маєте ніяких запитів на телепортацію!"
+Invalid-Player: "&6Виявляється, що гравець, що хотів телепортуватися до вас, вийшов із сервера!"
+Teleport-Message-Back-To-Sender: "&c%player% &6прийняв ваш запит на телепортацію."
+Teleported-Message: "&6Телепортовано!"
+Move-Cancel-Message: "&6Ви були переміщені та запит на телепортацію був видалений!"
+Rejected-Sender: "&6Гравець не прийняв ваш &cзапитt&6!"
+Rejected-Message: "&6ВИ не прийняли &cзапит&6!"
+Player-Is-In-Disabled-World: "&6Грваець, до якого ви хотіли телепортуватися він в &cсвіті, що не підтримує цю функцію&6!"
+Tpcancel-Usage-Message: "&6Будь ласка використовуйте: &c/tpcancel (гравець)"
+Error-Cancelling-Request: "&6Ви не можете скасувати свій &cзапит!"
+Request-Cancelled: "&6Ви успішно скасували &cзапит на телепортацію&6!"
+Death-Message-Coords: "&6Ваша локація смерті є: &c%coords%&6!"
+Time-Left: "&6Ви маєте &c%seconds% &6seconds щоб прийняти чи відхилити запит"
+Damaged-Cancel-Message: "&6Ви отримали урон і запит на телепортацію був видалений!"
+Different-Gamemode: "&6Ви не можете використовувати команди на телепортацію, бо ви в &6режимі &cГЛЯДАЧА!"
+World-Doesnt-Exists-Or-Unloaded: "&6Світ, до  якого ви намагаєтеся телепортуватись, або не завантажений, або не існує"
+
+# ЧАСТИНКИ ТА ЗВУКИ
+# Тут ви можете змінити гучність звуку або висоту. Ці рекомендовані значення
+# Виберіть назву звуку звідси: https://hub.spigotmc.org/javadocs/bukkit/org/bukkit/Sound.html
+Sound-Name: "ENTITY_EXPERIENCE_ORB_PICKUP"
+sound-volume: 3.0
+sound-pitch: 0.533
+# Виберіть назву частинки тут: https://hub.spigotmc.org/javadocs/spigot/org/bukkit/Particle.html
+Particle-Name: "EXPLOSION_NORMAL"
+
+## КНОПКИ
+#Тут ви можете знайти кольори https://hub.spigotmc.org/javadocs/bukkit/org/bukkit/ChatColor.html
+#Властивості кнопки ПРИЙНЯТИ
+Accept-Button: "ПРИЙНЯТИ"
+Accept-Button-Color: "GREEN"
+Accept-Button-Set-Bold: true
+Accept-Button-Description: "&6Натисніть, щоб &cПРИЙНЯТИ &6запит!"
+
+#Властивості середньої кнопки
+Middle-Button: " | "
+Middle-Button-Color: "GRAY"
+Middle-Button-Set-Bold: true
+Middle-Button-Description: "&7 <- Виберіть одне -> "
+
+#Властивості кнопки ВІДХИЛИТИ
+Deny-Button: "ВІДХИЛИТИ"
+Deny-Button-Color: "RED"
+Deny-Button-Set-Bold: true
+Deny-Button-Description: "&6Натисніть, щоб &cВІДХИЛИТИ &6запит!"
+
+# Якщо ви хочете вимкнути SimpleTPA для певних світів, пропишіть так - 'ІмяТвогоСвіту'
+#Вимкнутий плагін для світів:
+disabled-worlds:
+  - 'disabledworld'
+  
+#Булеани
+#Якщо ви хочете вимктути back команду, поставте true
+disable-back-command: false
+
+# Якщо ви хочете вимктути повідомлення координат смерті, поставте true
+disable-coords-message: false
+
+# Якщо ви хочете вимктути збереження координат смерті, поставте true
+disable-back-on-death: false
+
+# Якщо ви хочете вимктути збереження TP локацій, як TPA, TPAHERE, поставте true
+disable-back-on-tp: false
+
+#  Якщо ви хочете вимкнути перевірку на режим гри ГЛЯДАЧ, поставте true
+disable-gamemode-check: false
+
+#  Якщо ви хочете вимкнути збереження кнопок ПРИЙНЯТИ чи ВІДХИЛИТИ, поставте true
+disable-accept-deny-buttons: false
+
+#  Якщо ви хочете вимкнути збереження часток, поставте true
+disable-particles: false
+
+#  Якщо ви хочете вимкнути збереження систеси руху, поставте true
+disable-move-system: false
+
+# Якщо ви хочете вимкнути звуки плагіна, поставте true
+disable-sound: false
+
+# # Якщо ви хочете вимкнути міжвимірну подорож (дозволяється використовувати плагін у тому ж світі, що й іншому гравцеві), встановіть це на true
+disable-interdimensional-travel: false
+
+# Якщо ви хочете вимкнути неуразливість після телепортації, встановіть це на true
+disable-invincibility: false
+
+# Якщо ви хочете вимкнути реєстрацію /back місць звідки вийшли, встановіть це на true
+disable-back-on-quit: false
+
+# Все працює із СЕКУНДАМИ
+# Цілі числа
+invincibility-seconds: 5
+# Це збереже запит на телепортацію активним протягом X секунд
+keep-alive: 60
+# Це затримає телепортацію протягом X секунд
+delay-back-command: 5
+delay-teleportation: 5
+# Перерви
+back-cooldown: 10
+tpa-cooldown: 10
+tpahere-cooldown: 10
+tpahereall-cooldown: 10
+# Щоб встановити власну перерву, потрібно додати дозвіл: simpletpa.cooldown.Y.X де Y - це команда, а X - це секунди.
+# Параметри для команд: tpa | tpahere | back | tpahereall
+# Приклад: simpletpa.cooldown.tpa.300 | simpletpa.cooldown.tpahere.300 | simpletpa.cooldown.tpahereall.300 | simpletpa.cooldown.back.300
+# Це встановить перерву для tpa/ tpahere/ tpahereall / back на 300 секунд
+
+# Слава Україні! Героям слава!
+# Glory to Ukraine! Glory to heros!
